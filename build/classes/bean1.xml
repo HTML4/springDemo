@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.test.ioc.User"></bean>
+	<bean id="book" class="com.test.ioc.Book">
+		<!--<property name="bname" value="葵花宝典说"></property> -->
+		<constructor-arg name="bname" value="九阴真经"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="userService" class="com.test.service.UserService">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean id="userDao" class="com.test.dao.UserDao"></bean>
+</beans>
