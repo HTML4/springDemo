@@ -15,4 +15,31 @@
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	<bean id="userDao" class="com.test.dao.UserDao"></bean>
+	<bean id="orders" class="com.test.ioc.Orders">
+		<property name="array">
+			<array>
+				<value>a</value>
+				<value>b</value>
+				<value>c</value>
+			</array>
+		</property>
+		<property name="list">
+			<list>
+				<value>list</value>
+				<value>llls</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="a" value="aa"></entry>
+				<entry key="b" value="bb"></entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="class">com.mysql.jdbc</prop>
+				<prop key="url">jdbc:mysql://db</prop>
+			</props>
+		</property>
+	</bean>
 </beans>

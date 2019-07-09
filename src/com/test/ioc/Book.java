@@ -1,8 +1,9 @@
 package com.test.ioc;
 
+
 public class Book {
 	private String bname;
- 
+	
 	//有参构造
 	public Book(String bname) {
 		this.bname = bname;
@@ -15,4 +16,5 @@ public class Book {
 	public void add() {
 		System.out.println(bname);
 	}
+	
 }
